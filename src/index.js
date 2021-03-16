@@ -11,7 +11,6 @@ import './styles.scss';
 import { reducer } from "./reducers"
 
 const store = createStore(reducer);
-console.log(store.getState())
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(

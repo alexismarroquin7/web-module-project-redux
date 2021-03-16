@@ -20,9 +20,13 @@ const initialState = {
 export const reducer = (state = initialState, action) => {
     switch(action.type){
         case ADD_FEATURE:
-            console.log("ADD_FEATURE")
+            console.log(action.payload.name)
+
             return {
-                ...state
+                ...state,
+                additionalFeatures: [
+                    ...state.additionalFeatures.filter(feature => feature.name !== action.payload.name)
+                ]
             };
         default:
             return state;

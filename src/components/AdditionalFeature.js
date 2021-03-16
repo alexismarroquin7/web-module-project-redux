@@ -7,17 +7,17 @@ const AdditionalFeature = props => {
   return (
     <li>
       {/* Add an onClick that will let you add a feature to your car */}
-      <button onClick={() => props.addFeature()} className="button">Add</button>
+      <button onClick={() => props.addFeature(props.feature.name)} className="button">Add</button>
       {props.feature.name} (+{props.feature.price})
     </li>
   );
 };
 
-const mapStateToProps = (state, ownProps) => {
-  
-  const {feature} = ownProps;
+const mapStateToProps = (state) => {
 
-  return {feature};
+  return {
+    additionalFeatures: [state.additionalFeatures]
+  };
 }
 
 export default connect(mapStateToProps, {addFeature})(AdditionalFeature);

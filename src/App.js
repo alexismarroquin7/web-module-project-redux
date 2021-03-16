@@ -7,7 +7,7 @@ import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 
 const App = (props) => {
-  console.log("APP PROPS:", props)
+  // console.log("APP PROPS:", props)
   return (
     <div className="boxes">
       <div className="box">
